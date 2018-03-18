@@ -305,7 +305,7 @@ public class EncodeVideo {
             FileUtils.deleteQuietly(new File(workingDirectory, baseName  + "-lq.mp4"));
             executor.execute(c(
                     ffmpeg + " -i " + sourceFile.getPath() + " -y -vcodec libx264 -vprofile baseline -preset slow -b:v 200k -maxrate 300k -bufsize 600k " +
-                            "-vf scale=" + lqWidth + ":" + lqHeight + " -threads 0 -c:a aac -b:a 64k -pass 1 -an -f mp4  -strict -2" + firstPassFile
+                            "-vf scale=" + lqWidth + ":" + lqHeight + " -threads 0 -c:a aac -b:a 64k -pass 1 -an -f mp4  -strict -2 " + firstPassFile
             ));
             System.out.println(" ===================== MP4: LQ: second pass ===========================================");
             executor.execute(c(
