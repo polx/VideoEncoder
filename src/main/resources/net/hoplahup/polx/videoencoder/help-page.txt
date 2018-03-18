@@ -1,0 +1,27 @@
+Usage:  java -jar videoEncdoder.jar <pathToVideo> <output-directory?> <path-prefix?>
+
+  Option: add "-Dencoder.tmpdir=<tmpDir>" before -jar to choose the place
+             where the encoder will run (and produce temporary files). Otherwise
+             the current directory is used (it should not be the output-directory)
+          add "-Dffmpeg.path=<pathToFFmpeg>" to specify the place where
+             ffmpeg should be called (e.g. important if containing particular codecs)
+
+  This encoder calls ffmpeg to analyze sizes of the video and request re-encoding
+  to a Low-Quality and an High-Quality web-based variants in MP4 and WEBM codecs.
+  (low-quality: fits in 640 x 360; high-quality: fits in 1280 x 720)
+
+  The encoder brings its results in the output-directory.
+  If this is missing, the output-directory is named after the basename
+  (without extension) of the video file.
+
+  The encoder produces sizes.js which documents the status of the encoding and
+  the resulting size and URLs to request the variants.
+  The syntax is window['video_<baseName>'] = "<statusMessage>" or
+  window['video_<baseName>'] = {label:'<label>', file:'<file>', image: '<posterFile>',
+  	width:<width>, height:<height>, bandwidth:<bandwidth>}
+  The encoder also produces an HTML file embed.html which can be included as an
+  element containing, once the process is finished, the video element
+  presenting the video with a selection based on screen resolution.
+  The path references there are prefixed with path-prefix, the
+  optional third argument (or as property -DpathPrefix).
+
