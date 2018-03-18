@@ -19,7 +19,7 @@ First install [ffmpeg](https://ffmpeg.org).
 Download the source code and compile with [maven](https://maven.apache.org).
 
 `git clone https://github.com/polx/VideoEncoder.git`
-`mvn build`
+`mvn package`
 
 You obtaine a `videoEncoder.jar` in the `target` directory which is the main java file.
 
