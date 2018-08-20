@@ -13,9 +13,10 @@ public class Util {
     }
 
     static List videoExtensions = Arrays.asList("mp4","m4v","ogv","webm","mov","mpeg","avi");
-    static boolean isVideoFilename(String fn) {
+    static boolean isVideoFileName(String fn) {
         fn = fn.toLowerCase();
         if(fn.contains(".")) fn = fn.substring(fn.lastIndexOf('.')+1);
         return videoExtensions.contains(fn);
     }
+
 }
