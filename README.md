@@ -8,9 +8,9 @@ Moreover, the encoder generates a video element and a javascript page including 
 
 ## Usage over the command line
 
-See [the help page](src/main/java/resources/net/hoplahup/polx/videoencoder/help-page.txt).
+See [the help page](https://github.com/polx/VideoEncoder/blob/master/src/main/resources/net/hoplahup/polx/videoencoder/help-page.txt).
 
-See [the sample daemon config](src/main/java/resources/net/hoplahup/polx/videoencoder/sample-daemon-config.properties) to see how to configure the encoder-daemon.
+See [the sample daemon config](https://github.com/polx/VideoEncoder/blob/master/src/main/resources/net/hoplahup/polx/videoencoder/sample-daemon-config.properties) to see how to configure the encoder-daemon.
 
 ## Installation
 
